@@ -37,9 +37,9 @@ setup(
     description='A Python interface for Facebook fastText library',
     long_description=open('README.rst', 'r').read(),
     license='BSD 3-Clause License',
-    packages=['setuptools>=18.0', 'fasttext'],
+    packages=['fasttext'],
     ext_modules = extensions,
-    setup_requires=['cython'],
+    setup_requires=['setuptools>=18.0', 'cython'],
     install_requires=[
         'numpy>=1',
         'future'
