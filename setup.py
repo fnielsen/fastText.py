@@ -1,6 +1,5 @@
 from setuptools import setup, find_packages
 from setuptools.extension import Extension
-from Cython.Build import cythonize
 from sys import platform
 import unittest
 
@@ -38,8 +37,9 @@ setup(
     description='A Python interface for Facebook fastText library',
     long_description=open('README.rst', 'r').read(),
     license='BSD 3-Clause License',
-    packages=['fasttext'],
-    ext_modules = cythonize(extensions),
+    packages=['setuptools>=18.0', 'fasttext'],
+    ext_modules = extensions,
+    setup_requires=['cython'],
     install_requires=[
         'numpy>=1',
         'future'
