@@ -11,7 +11,7 @@ else:
     extra_compile_args = ['-O3', '-pthread', '-funroll-loops', '-std=c++0x']
 
 extensions = [
-    Extension('*',
+    Extension('fasttext',
         sources=[
             'fasttext/fasttext.pyx',
             'fasttext/interface.cc',
